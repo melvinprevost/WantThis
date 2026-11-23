@@ -23,6 +23,11 @@ Row Level Security de PostgreSQL (impossible à contourner depuis le navigateur)
 3. **Authentication → Providers** : vérifie que *Email* est activé. Pour des tests
    rapides en famille, tu peux désactiver *Confirm email*.
 4. **Settings → API** : récupère `Project URL` et la clé `anon public`.
+5. **Authentication → URL Configuration** (sinon les liens des e-mails pointent
+   vers `localhost`) :
+   - *Site URL* : `https://<utilisateur>.github.io/WantThis/`
+   - *Redirect URLs* : `https://<utilisateur>.github.io/WantThis/**` et, pour le
+     dev, `http://localhost:5173/WantThis/**`
 
 ### 2. Configuration locale
 ```bash
